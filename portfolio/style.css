@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(14, 20, 46, 0.7), rgba(4, 9, 30, .7)), url('work-space-1920x1080.jpg');
+    background-size: cover;
+    font-family: 'Poppins';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #1ad6cd;
+    font-size: 15px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #00ff5e;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+button{
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: .7em 2em;
+    border: solid #0bddcf;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(4, 9, 30, .7), 0 3px 6px rgba(0, 0, 0, 0.7);
+    color:aqua;
+    text-decoration: none;
+    transition: ease all;
+    z-index: 1;
+
+
+}
+
+button::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: 0;
+    background-color: #67721c;
+    z-index: -1;
+    
+}
+
+button:hover , button:focus {
+    color: rgb(0, 0, 0);
+}
+
+button:hover::before, button:focus::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+
+}
+
+button:active {
+    transition: scale(0.9);
+}
+
